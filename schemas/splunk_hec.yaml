@@ -1,0 +1,12 @@
+---
+name: splunk_hec
+batch_method: concatenate
+schema:
+    time: '%{log_event_epoch}'
+    host: '%{host}'
+    source: 'puppet'
+    sourcetype: 'txt'
+    index: 'main'
+    event:
+        severity: '%{log_event_level}'
+        message: '%{log_event_source}: %{log_event_message}'

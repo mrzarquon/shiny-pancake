@@ -1,0 +1,446 @@
+{
+   "configuration_version" : 1533874550,
+   "catalog_uuid" : "1ce5f99c-fb04-48df-bead-fe68799f0eda",
+   "cached_catalog_status" : "not_used",
+   "corrective_change" : false,
+   "time" : "2018-08-10T14:15:50.974347071+10:00",
+   "host" : "semirhage.localdomain",
+   "puppet_version" : "5.3.3",
+   "status" : "changed",
+   "noop" : false,
+   "report_format" : 7,
+   "noop_pending" : false,
+   "logs" : [
+      {
+         "file" : null,
+         "level" : "notice",
+         "time" : "2018-08-10T14:15:51.018101774+10:00",
+         "line" : null,
+         "tags" : [
+            "notice"
+         ],
+         "source" : "Puppet",
+         "message" : "foo"
+      },
+      {
+         "line" : 1,
+         "time" : "2018-08-10T14:15:51.018822556+10:00",
+         "level" : "notice",
+         "file" : "/home/tsharpe/dotfiles/puppet/manifests/test.pp",
+         "message" : "defined 'message' as 'foo'",
+         "source" : "/Stage[main]/Main/Notify[foo]/message",
+         "tags" : [
+            "notice",
+            "notify",
+            "foo",
+            "class"
+         ]
+      },
+      {
+         "source" : "Puppet",
+         "tags" : [
+            "notice"
+         ],
+         "message" : "bar",
+         "file" : null,
+         "level" : "notice",
+         "time" : "2018-08-10T14:15:51.019362869+10:00",
+         "line" : null
+      },
+      {
+         "line" : 2,
+         "time" : "2018-08-10T14:15:51.019945662+10:00",
+         "level" : "notice",
+         "file" : "/home/tsharpe/dotfiles/puppet/manifests/test.pp",
+         "message" : "defined 'message' as 'bar'",
+         "tags" : [
+            "notice",
+            "notify",
+            "bar",
+            "class"
+         ],
+         "source" : "/Stage[main]/Main/Notify[bar]/message"
+      },
+      {
+         "tags" : [
+            "notice"
+         ],
+         "source" : "Puppet",
+         "message" : "Applied catalog in 0.05 seconds",
+         "time" : "2018-08-10T14:15:51.040423897+10:00",
+         "level" : "notice",
+         "file" : null,
+         "line" : null
+      }
+   ],
+   "environment" : "production",
+   "transaction_uuid" : "352d9141-281e-431c-a532-40c3b3e4b2d9",
+   "resource_statuses" : {
+      "Schedule[hourly]" : {
+         "resource_type" : "Schedule",
+         "out_of_sync" : false,
+         "line" : null,
+         "evaluation_time" : 4.2797e-05,
+         "time" : "2018-08-10T14:15:51.021584484+10:00",
+         "file" : null,
+         "out_of_sync_count" : 0,
+         "change_count" : 0,
+         "corrective_change" : false,
+         "changed" : false,
+         "failed" : false,
+         "title" : "hourly",
+         "skipped" : false,
+         "resource" : "Schedule[hourly]",
+         "events" : [],
+         "containment_path" : [
+            "Schedule[hourly]"
+         ],
+         "tags" : [
+            "schedule",
+            "hourly"
+         ]
+      },
+      "Notify[bar]" : {
+         "containment_path" : [
+            "Stage[main]",
+            "Main",
+            "Notify[bar]"
+         ],
+         "tags" : [
+            "notify",
+            "bar",
+            "class"
+         ],
+         "resource" : "Notify[bar]",
+         "skipped" : false,
+         "events" : [
+            {
+               "property" : "message",
+               "time" : "2018-08-10T14:15:51.019329933+10:00",
+               "audited" : false,
+               "desired_value" : "bar",
+               "message" : "defined 'message' as 'bar'",
+               "corrective_change" : false,
+               "name" : "message_changed",
+               "status" : "success",
+               "previous_value" : "absent",
+               "historical_value" : null,
+               "redacted" : null
+            }
+         ],
+         "failed" : false,
+         "changed" : true,
+         "corrective_change" : false,
+         "title" : "bar",
+         "line" : 2,
+         "out_of_sync" : true,
+         "resource_type" : "Notify",
+         "change_count" : 1,
+         "file" : "/home/tsharpe/dotfiles/puppet/manifests/test.pp",
+         "out_of_sync_count" : 1,
+         "evaluation_time" : 0.000955275,
+         "time" : "2018-08-10T14:15:51.019181911+10:00"
+      },
+      "Schedule[monthly]" : {
+         "change_count" : 0,
+         "time" : "2018-08-10T14:15:51.021964068+10:00",
+         "evaluation_time" : 4.0904e-05,
+         "file" : null,
+         "out_of_sync_count" : 0,
+         "line" : null,
+         "resource_type" : "Schedule",
+         "out_of_sync" : false,
+         "title" : "monthly",
+         "corrective_change" : false,
+         "changed" : false,
+         "failed" : false,
+         "events" : [],
+         "resource" : "Schedule[monthly]",
+         "skipped" : false,
+         "tags" : [
+            "schedule",
+            "monthly"
+         ],
+         "containment_path" : [
+            "Schedule[monthly]"
+         ]
+      },
+      "Schedule[never]" : {
+         "change_count" : 0,
+         "file" : null,
+         "out_of_sync_count" : 0,
+         "evaluation_time" : 3.9857e-05,
+         "time" : "2018-08-10T14:15:51.022073416+10:00",
+         "line" : null,
+         "out_of_sync" : false,
+         "resource_type" : "Schedule",
+         "title" : "never",
+         "failed" : false,
+         "changed" : false,
+         "corrective_change" : false,
+         "events" : [],
+         "resource" : "Schedule[never]",
+         "skipped" : false,
+         "tags" : [
+            "schedule",
+            "never"
+         ],
+         "containment_path" : [
+            "Schedule[never]"
+         ]
+      },
+      "Schedule[weekly]" : {
+         "containment_path" : [
+            "Schedule[weekly]"
+         ],
+         "tags" : [
+            "schedule",
+            "weekly"
+         ],
+         "resource" : "Schedule[weekly]",
+         "skipped" : false,
+         "events" : [],
+         "corrective_change" : false,
+         "changed" : false,
+         "failed" : false,
+         "title" : "weekly",
+         "line" : null,
+         "resource_type" : "Schedule",
+         "out_of_sync" : false,
+         "change_count" : 0,
+         "evaluation_time" : 3.9678e-05,
+         "time" : "2018-08-10T14:15:51.021813808+10:00",
+         "file" : null,
+         "out_of_sync_count" : 0
+      },
+      "Schedule[puppet]" : {
+         "title" : "puppet",
+         "corrective_change" : false,
+         "changed" : false,
+         "failed" : false,
+         "change_count" : 0,
+         "time" : "2018-08-10T14:15:51.021405033+10:00",
+         "evaluation_time" : 6.1628e-05,
+         "out_of_sync_count" : 0,
+         "file" : null,
+         "line" : null,
+         "resource_type" : "Schedule",
+         "out_of_sync" : false,
+         "tags" : [
+            "schedule",
+            "puppet"
+         ],
+         "containment_path" : [
+            "Schedule[puppet]"
+         ],
+         "events" : [],
+         "resource" : "Schedule[puppet]",
+         "skipped" : false
+      },
+      "Schedule[daily]" : {
+         "line" : null,
+         "resource_type" : "Schedule",
+         "out_of_sync" : false,
+         "change_count" : 0,
+         "time" : "2018-08-10T14:15:51.021701623+10:00",
+         "evaluation_time" : 3.9599e-05,
+         "out_of_sync_count" : 0,
+         "file" : null,
+         "corrective_change" : false,
+         "failed" : false,
+         "changed" : false,
+         "title" : "daily",
+         "resource" : "Schedule[daily]",
+         "skipped" : false,
+         "events" : [],
+         "containment_path" : [
+            "Schedule[daily]"
+         ],
+         "tags" : [
+            "schedule",
+            "daily"
+         ]
+      },
+      "Filebucket[puppet]" : {
+         "change_count" : 0,
+         "evaluation_time" : 0.000101289,
+         "time" : "2018-08-10T14:15:51.022203033+10:00",
+         "file" : null,
+         "out_of_sync_count" : 0,
+         "line" : null,
+         "resource_type" : "Filebucket",
+         "out_of_sync" : false,
+         "title" : "puppet",
+         "corrective_change" : false,
+         "changed" : false,
+         "failed" : false,
+         "events" : [],
+         "resource" : "Filebucket[puppet]",
+         "skipped" : false,
+         "tags" : [
+            "filebucket",
+            "puppet"
+         ],
+         "containment_path" : [
+            "Filebucket[puppet]"
+         ]
+      },
+      "Notify[foo]" : {
+         "title" : "foo",
+         "corrective_change" : false,
+         "changed" : true,
+         "failed" : false,
+         "evaluation_time" : 0.001121206,
+         "time" : "2018-08-10T14:15:51.017821075+10:00",
+         "file" : "/home/tsharpe/dotfiles/puppet/manifests/test.pp",
+         "out_of_sync_count" : 1,
+         "change_count" : 1,
+         "resource_type" : "Notify",
+         "out_of_sync" : true,
+         "line" : 1,
+         "tags" : [
+            "notify",
+            "foo",
+            "class"
+         ],
+         "containment_path" : [
+            "Stage[main]",
+            "Main",
+            "Notify[foo]"
+         ],
+         "events" : [
+            {
+               "time" : "2018-08-10T14:15:51.018023490+10:00",
+               "property" : "message",
+               "redacted" : null,
+               "historical_value" : null,
+               "status" : "success",
+               "previous_value" : "absent",
+               "corrective_change" : false,
+               "name" : "message_changed",
+               "desired_value" : "foo",
+               "audited" : false,
+               "message" : "defined 'message' as 'foo'"
+            }
+         ],
+         "skipped" : false,
+         "resource" : "Notify[foo]"
+      }
+   },
+   "metrics" : {
+      "changes" : {
+         "values" : [
+            [
+               "total",
+               "Total",
+               2
+            ]
+         ],
+         "label" : "Changes",
+         "name" : "changes"
+      },
+      "resources" : {
+         "name" : "resources",
+         "values" : [
+            [
+               "total",
+               "Total",
+               9
+            ],
+            [
+               "skipped",
+               "Skipped",
+               0
+            ],
+            [
+               "failed",
+               "Failed",
+               0
+            ],
+            [
+               "failed_to_restart",
+               "Failed to restart",
+               0
+            ],
+            [
+               "restarted",
+               "Restarted",
+               0
+            ],
+            [
+               "changed",
+               "Changed",
+               2
+            ],
+            [
+               "out_of_sync",
+               "Out of sync",
+               2
+            ],
+            [
+               "scheduled",
+               "Scheduled",
+               0
+            ],
+            [
+               "corrective_change",
+               "Corrective change",
+               0
+            ]
+         ],
+         "label" : "Resources"
+      },
+      "time" : {
+         "label" : "Time",
+         "values" : [
+            [
+               "notify",
+               "Notify",
+               0.002076481
+            ],
+            [
+               "schedule",
+               "Schedule",
+               0.000264463
+            ],
+            [
+               "filebucket",
+               "Filebucket",
+               0.000101289
+            ],
+            [
+               "config_retrieval",
+               "Config retrieval",
+               0.084153659
+            ],
+            [
+               "total",
+               "Total",
+               0.086595892
+            ]
+         ],
+         "name" : "time"
+      },
+      "events" : {
+         "values" : [
+            [
+               "total",
+               "Total",
+               2
+            ],
+            [
+               "failure",
+               "Failure",
+               0
+            ],
+            [
+               "success",
+               "Success",
+               2
+            ]
+         ],
+         "label" : "Events",
+         "name" : "events"
+      }
+   }
+}
